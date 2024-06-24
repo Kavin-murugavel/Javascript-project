@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booksy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <h1>Booksy</h1>
+    </div>
+    <div class="container">
+        <div class="book-container">
+            <h2>Rich Dad Poor Dad</h2>
+            <h5>Robert</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque inventore laudantium molestiae cumque itaque veniam. Eius recusandae porro unde laborum! Animi laudantium soluta cum numquam voluptas ex corporis molestiae quibusdam.</p>
+            <button>Delete</button>
+        </div>
+    </div>
+
+    <div class="popup-overlay" onclick="closePopup()"></div>
+    <div class="popup-box">
+        <h2>Add Book</h2>
+        <form>
+            <input type="text" placeholder="Book Title" id="book-title-input"><br>
+            <input type="text" placeholder="Book Author" id="book-author-input"><br>
+            <textarea placeholder="Short Description" id="short-description-input"></textarea>
+            <br>
+            <button type="button" onclick="addBook()">Add</button>
+            <button type="button" onclick="closePopup()">Cancel</button>
+        </form>
+    </div>
+
+    <button class="add-button" id="add-popup-button" onclick="showPopup()">+</button>
+    <script>
+        function showPopup() {
+            document.querySelector('.popup-overlay').style.display = 'block';
+            document.querySelector('.popup-box').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.querySelector('.popup-overlay').style.display = 'none';
+            document.querySelector('.popup-box').style.display = 'none';
+        }
+
+        function addBook() {
+            // Add book logic here
+            closePopup();
+        }
+    </script>
+</body>
+</html>
